@@ -14,11 +14,15 @@
 	<header>
 		<h1>Juegos de Deporte</h1>
 		<p>¡Aquí encontrarás los mejores juegos de Deporte del mercado!</p>
-		<a href="E1_matias_barraza_S2.html">Inicio</a>
-		<a href="accion.html">Accion</a>
-		<a href="Estrategia.html">Estrategia</a>
-		<a href="Registro.html">Registrarse</a>
-		<a href="inicio_sesion.html">Inicio de sesion</a>
+		<a href="{% url 'inicio' %}">Inicio</a>
+		<a href="{% url 'accion' %}">accion</a>
+        <a href="{% url 'terror' %}">Terror</a>
+        <a href="{% url 'estrategia' %}">Estrategia</a>
+        <a href="{% url 'registro' %}">Registrarse</a>
+        <a href="{% url 'inicio_sesion' %}">Inicio de sesion</a>
+		
+		
+
 	</header>
 	
 	<section>

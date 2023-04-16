@@ -24,7 +24,7 @@ def deporte(request):
 
 
 def registro(request):
-    return render(request,'core/Reegistro.html')
+    return render(request,'core\Registro.html')
 
 
 def inicio_sesion(request):

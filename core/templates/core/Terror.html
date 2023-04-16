@@ -14,12 +14,12 @@
 	<header>
 		<h1>Juegos de Terror</h1>
 		<p>¡Aquí encontrarás los mejores juegos de Terror del mercado!</p>
-		<a href="E1_matias_barraza_S2.html">Inicio</a>
-		<a href="accion.html">Accion</a>
-		<a href="Deporte.html2">Deporte</a>
-		<a href="Estrategia.html">Estrategia</a>
-		<a href="Registro.html">Registrarse</a>
-		<a href="inicio_sesion.html">Inicio de sesion</a>
+		<a href="{% url 'inicio' %}">Inicio</a>
+		<a href="{% url 'accion' %}">accion</a>
+        <a href="{% url 'estrategia' %}">Estrategia</a>
+        <a href="{% url 'deporte' %}">Deporte</a>
+        <a href="{% url 'registro' %}">Registrarse</a>
+        <a href="{% url 'inicio_sesion' %}">Inicio de sesion</a>
 	</header>
 	
 	<section>
@@ -31,11 +31,10 @@
 				<!-- Columna 1 -->
 				<div class="col-sm-12 col-md-6 col-lg-4">
 					<div class="card mb-4">
-						<img class="card-img-top" src="imagenes/gow.webp"
-							alt="Juego 1">
+						<img class="card-img-top"  src="{% static 'core/css/img/936ede59db263b989df1eec175d0181b.jpg' %}" alt="Descripción de la imagen">
 						<div class="card-body">
-							<h5 class="card-title">God of war Ragnarok PS5</h5>
-							<p class="card-text">Las aventuras de kratos siguen en este nuevo juego.</p>
+							<h5 class="card-title">Resident evil 8: village</h5>
+							<p class="card-text">Continua la historia de ethan winters y chris redfield.</p>
 							<a href="#" class="btn btn-primary">Comprar</a>
 						</div>
 					</div>
@@ -43,11 +42,10 @@
 				<!-- Columna 2 -->
 				<div class="col-sm-12 col-md-6 col-lg-4">
 					<div class="card mb-4">
-						<img class="card-img-top" src="imagenes/fornite.jpg"
-							alt="Juego 2">
+						<img class="card-img-top" src="{% static 'core/css/img/201841318231_1.jpg' %}" alt="Descripción de la imagen">
 						<div class="card-body">
-							<h5 class="card-title">Fortnite</h5>
-							<p class="card-text">Puedes comprar Pavos y accesorios relacionados a este entretenido juego de Epic Games.</p>
+							<h5 class="card-title">The forest</h5>
+							<p class="card-text">Sobrevive en una isla mientras buscas a tu hijo y descubres los horrores.</p>
 							<a href="#" class="btn btn-primary">Comprar</a>
 						</div>
 					</div>
@@ -55,11 +53,10 @@
 				<!-- Columna 3 -->
 				<div class="col-sm-12 col-md-6 col-lg-4">
 					<div class="card mb-4">
-						<img class="card-img-top" src="imagenes/foro-cod-warzone.jpg"
-							alt="Juego 3">
+						<img class="card-img-top" src="{% static 'core/css/img/Outlast-Trinity-184.jpg' %}" alt="Descripción de la imagen">
 						<div class="card-body">
-							<h5 class="card-title">Warzone</h5>
-							<p class="card-text">Sobrevive y gana la gran batalla que acontece en Verdansk.</p>
+							<h5 class="card-title">Outlast Trinity</h5>
+							<p class="card-text">Revive la famosa saga de terror en sus 2 juegos .</p>
 							<a href="#" class="btn btn-primary">Comprar</a>
 						</div>
 					</div>

@@ -14,12 +14,12 @@
 	<header>
 		<h1>Juegos de Estrategia</h1>
 		<p>¡Aquí encontrarás los mejores juegos de acción del mercado!</p>
-		<a href="E1_matias_barraza_S2.html">Inicio</a>
-		<a href="accion.html">accion</a>
-		<a href="Terror.html">Terror</a>
-		<a href="Deporte.html">Deporte</a>
-		<a href="Registro.html">Registrarse</a>
-		<a href="inicio_sesion.html">Inicio de sesion</a>
+		<a href="{% url 'inicio' %}">Inicio</a>
+		
+		<a href="{% url 'terror' %}">Terror</a>
+		<a href="{% url 'estrategia' %}">Estrategia</a>
+		<a href="{% url 'deporte' %}">Deporte</a>
+		<a href="{% url 'inicio_sesion' %}">Inicio de sesion</a>
 	</header>
 	
 	<section>
@@ -28,8 +28,7 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-6 col-lg-6">
 				<div class="card mb-4">
-					<img class="card-img-top" src="imagenes/zomboid.jpeg"
-						alt="Juego 1">
+					<img class="card-img-top" src="{% static 'core\static\core\css\img\1640807705-project-zomboid.jpg' %}" alt="Descripción de la imagen">>
 					<div class="card-body">
 						<h5 class="card-title">Project Zomboid</h5>
 						<p class="card-text">El juego de zombis mas tecnico del mercado cada accion con precaucion tomaras.</p>
