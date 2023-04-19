@@ -40,7 +40,7 @@ def agregar_usuario(request):
         telefono = request.POST['telefono']
         direccion = request.POST['direccion']
         
-        if nombre and usuario and correo and contrasena and telefono and direccion
-        formulario = Formulario(nombre=nombre, usuario=usuario, correo=correo, contrasena=contrasena, telefono=telefono, direccion=direccion)
-        formulario.save()  
+        if nombre and usuario and correo and contrasena and telefono and direccion:
+            formulario = Formulario(nombre=nombre, usuario=usuario, correo=correo, contrasena=contrasena, telefono=telefono, direccion=direccion)
+            formulario.save()  
     return render(request, 'core/inicio_sesion.html')
