@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Formulario
 
 # Create your views here.
 def home(request):
