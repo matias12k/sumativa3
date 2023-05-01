@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from .models import Formulario
-
+from django.http import JsonResponse
+from .models import Usuario
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view, authentication_classes, permission_classes
+from rest_framework.response import Response
 # Create your views here.
 def home(request):
     
@@ -44,3 +49,16 @@ def agregar_usuario(request):
             formulario = Formulario(nombre=nombre, usuario=usuario, correo=correo, contrasena=contrasena, telefono=telefono, direccion=direccion)
             formulario.save()  
     return render(request, 'core/inicio_sesion.html')
+
+def usuarios(request):
+    usuarios = Usuario.objects.all().values()
+    return JsonResponse({'usuarios': list(usuarios)})
+
+
+@api_view(['GET'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def usuarios(request):
+    usuarios = Usuario.objects.all()
+    serializer = UsuarioSerializer(usuarios, many=True)
+    return Response(serializer.data)
