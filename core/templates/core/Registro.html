@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
   </head>
   <header>
     <a href="{% url 'inicio' %}">Inicio</a>
@@ -19,7 +20,9 @@
 
   </header>
   <body>
-    <form id="registro">
+    <form method="POST" id="registro">
+
+      {% csrf_token %}
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" required>
       
@@ -41,9 +44,9 @@
         <label for="direccion">Dirección de despacho:</label>
         <input type="text" id="direccion" name="direccion">
       
-        <button type="submit" id="enviar">Enviar</button>
-        <button type="reset" id="limpiar">Limpiar</button>
+        <input type="submit" value ="ENVIAR">
+        <input type="reset" id="limpiar">
+        <script src="{% static 'core\js\index.js}"></script>
   </form>
-  <script src="js/index.js"></script>
   </body>
 </html>

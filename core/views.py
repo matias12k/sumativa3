@@ -44,11 +44,14 @@ def agregar_usuario(request):
         contrasena = request.POST['contrasena']
         telefono = request.POST['telefono']
         direccion = request.POST['direccion']
+        Formulario.objects.create(nombre=nombre, usuario=usuario)
+        return render(request, 'core/accion.html')
         
-        if nombre and usuario and correo and contrasena and telefono and direccion:
-            formulario = Formulario(nombre=nombre, usuario=usuario, correo=correo, contrasena=contrasena, telefono=telefono, direccion=direccion)
-            formulario.save()  
-    return render(request, 'core/inicio_sesion.html')
+    #    if nombre and usuario and correo and contrasena and telefono and direccion:
+     #       Formulario.objects.create (nombre= nombre, usuario=usuario, correo=correo, contrasena=contrasena, telefono=telefono, direccion=direccion)
+    #      Formulario.save()
+    else:  
+        return render(request, 'core/inicio_sesion.html')
 
 def usuarios(request):
     usuarios = Usuario.objects.all().values()
@@ -60,5 +63,5 @@ def usuarios(request):
 @permission_classes([IsAuthenticated])
 def usuarios(request):
     usuarios = Usuario.objects.all()
-    serializer = UsuarioSerializer(usuarios, many=True)
+    serializer = Usuario.Serializer(usuarios, many=True)
     return Response(serializer.data)
